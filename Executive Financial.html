@@ -321,13 +321,13 @@ function render(){
       ${MC('Revenue per visit',fD(rPV),changeBadge(rPV,pRPV,true,'D'),'var(--teal)')}
       ${MC('Revenue per eval',fD(rPE),changeBadge(rPE,pRPE,true,'D'),'var(--blue)')}
       ${MC('Profit margin',fP(margin),changeBadge(margin,pMargin,true,'P'),margin!=null&&margin>=0?'var(--teal)':'var(--red)')}
-      ${MC('Total expenses',combinedExp?fD(combinedExp):(pCombinedExp?fD(pCombinedExp)+' (prior yr)':'—'),combinedExp?changeBadge(combinedExp,pCombinedExp,false,'D'):'','var(--gold)')}
+      ${MC('','','','','empty')}
     </div>
     <div class="g4" style="margin-top:12px">
+      ${MC('Total expenses',combinedExp?fD(combinedExp):(pCombinedExp?fD(pCombinedExp)+' (prior yr)':'—'),combinedExp?changeBadge(combinedExp,pCombinedExp,false,'D'):'','var(--gold)')}
       ${MC('Expenses per visit',expPV?fD(expPV):(pExpPV?fD(pExpPV)+' (prior yr)':'—'),expPV?changeBadge(expPV,pExpPV,false,'D'):'','var(--gold)')}
       ${MC('Cost of goods per visit',cogPV?fD(cogPV):(pCogPV?fD(pCogPV)+' (prior yr)':'—'),cogPV?changeBadge(cogPV,pCogPV,false,'D'):'','var(--orange)')}
-      ${MC('','','','','empty')}
-      ${MC('','','','','empty')}
+      ${MC('Total expenses per visit',ePV?fD(ePV):(pEPV?fD(pEPV)+' (prior yr)':'—'),ePV?changeBadge(ePV,pEPV,false,'D'):'','var(--gold)')}
     </div>
 
     ${SH('Monthly trends')}
@@ -355,7 +355,7 @@ function render(){
       ${MC('Full time equivalent',fte?fN(fte,2):'—','','var(--blue)')}
       ${MC('Visits per FTE',fN(vPF,0),changeBadge(vPF,pVPF,true,'N'),'var(--teal)')}
       ${MC('Revenue per FTE',fD(rPF),changeBadge(rPF,pRPF,true,'D'),'var(--blue)')}
-      ${MC('Expenses per visit',fD(ePV),changeBadge(ePV,pEPV,false,'D'),'var(--gold)')}
+      ${MC('Total expenses per visit',fD(ePV),changeBadge(ePV,pEPV,false,'D'),'var(--gold)')}
     </div>
     <div class="g4" style="margin-top:12px">
       ${MC('Referrals per FTE',fN(refPF,0),changeBadge(refPF,pRefPF,true,'N'),'var(--blue)')}
