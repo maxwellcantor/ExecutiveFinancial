@@ -273,8 +273,8 @@ function bOpts(ttFmt){
 
 function render(){
   const clinic=document.getElementById('clinicSel').value;
-  const year=document.getElementById('yearSel').value;
-  const comp=document.getElementById('compSel').value;
+  const year=parseInt(document.getElementById('yearSel').value);
+  const comp=parseInt(document.getElementById('compSel').value);
   const isCompany=clinic==='Company';
   const hasComp=comp!=='none';
   const moNames=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
